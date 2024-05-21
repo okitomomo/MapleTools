@@ -7,6 +7,7 @@ export default defineConfig({
   root: 'src',
   plugins: [react()],
   build: {
+    cssCodeSplit : false,
     // distフォルダに出力
     outDir: resolve(__dirname, 'dist'),
     // 存在しないときはフォルダを作成する
@@ -18,7 +19,8 @@ export default defineConfig({
       },
       // bundle.jsを差し替えする
       output: {
-        entryFileNames: `assets/[name]/bundle.js`,
+        entryFileNames: `assets/bundle.js`,
+        
       },
     },
   },
